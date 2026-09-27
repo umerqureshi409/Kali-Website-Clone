@@ -166,7 +166,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1150;
   padding: 14px 0;
   background: transparent;
   transition: background .3s ease, padding .3s ease, box-shadow .3s ease;
