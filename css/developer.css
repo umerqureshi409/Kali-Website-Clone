@@ -1,0 +1,202 @@
+/* ==========================================================================
+   DEVELOPER PAGE STYLES
+   Extends style.css — same theme variables, so the dark/light toggle
+   (persisted from index.html via localStorage) still applies here.
+   ========================================================================== */
+
+.section-pad-sm {
+  padding: 50px 0;
+}
+
+.active-link {
+  color: var(--accent-purple) !important;
+}
+
+/* ---------- hero ---------- */
+.dev-hero {
+  padding: 150px 0 70px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(138, 75, 255, .18), transparent 55%),
+    var(--bg-1);
+  border-bottom: 1px solid var(--border);
+}
+
+.dev-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.dev-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 210px;
+  height: 210px;
+}
+
+.dev-photo {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg-1);
+  position: relative;
+  z-index: 2;
+}
+
+.dev-photo-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  z-index: 1;
+  background: conic-gradient(from 0deg, var(--accent-purple), var(--accent-blue), var(--accent-purple));
+  animation: spinRing 6s linear infinite;
+}
+
+@keyframes spinRing {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dev-eyebrow {
+  color: var(--accent-purple);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.dev-hero-text h1 {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+  color: var(--text-1);
+}
+
+.dev-role {
+  color: var(--text-2);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.dev-desc {
+  color: var(--text-3);
+  max-width: 560px;
+  margin-bottom: 26px;
+  font-size: .92rem;
+  line-height: 1.7;
+}
+
+.dev-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media(max-width:760px) {
+  .dev-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dev-links {
+    justify-content: center;
+  }
+
+  .dev-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------- quick stats ---------- */
+.dev-stats {
+  background: var(--bg-0);
+}
+
+.stat-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 14px;
+  height: 100%;
+}
+
+.stat-card h3 {
+  color: var(--accent-purple);
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  color: var(--text-3);
+  font-size: .8rem;
+  margin: 0;
+}
+
+/* ---------- about ---------- */
+.dev-about h2 {
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+}
+
+.dev-about p {
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.dev-panel {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 26px;
+}
+
+.dev-panel h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--text-1);
+}
+
+.dev-panel h4 i {
+  color: var(--accent-purple);
+}
+
+.dev-panel ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-2);
+  font-size: .88rem;
+  line-height: 1.9;
+}
+
+/* ---------- skills ---------- */
+.dev-skills {
+  background: var(--bg-1);
+}
+
+.dev-skills h2 {
+  margin-bottom: 34px;
+  font-size: 1.8rem;
+}
+
+.skill-chip {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 12px 10px;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  color: var(--text-1);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
+}

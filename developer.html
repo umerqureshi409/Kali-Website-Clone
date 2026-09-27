@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer | Kali Linux Clone</title>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/developer.css">
+<link rel="icon" href="images/kali-dragon-icon.svg">
+</head>
+<body>
+
+<!-- reuse the same navbar markup/behaviour as index.html -->
+<nav class="kali-navbar scrolled">
+  <div class="container-x">
+    <a href="index.html" class="kali-logo">KALI</a>
+    <button class="navbar-toggle"><i class="bi bi-list"></i></button>
+    <div class="kali-nav-links">
+      <a href="index.html">HOME</a>
+      <a href="index.html#standard">ABOUT KALI</a>
+      <a href="index.html#tools" onclick="location.href='index.html'">TOOLS</a>
+      <a href="developer.html" class="active-link">DEVELOPER</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     DEVELOPER HERO — photo + name + role + quick facts
+========================================================= -->
+<header class="dev-hero">
+  <div class="container-x dev-hero-inner">
+    <div class="dev-photo-wrap">
+      <img src="images/dev/umer.jpeg" alt="Umer Qureshi" class="dev-photo">
+      <span class="dev-photo-ring"></span>
+    </div>
+    <div class="dev-hero-text">
+      <p class="dev-eyebrow">Meet the Developer</p>
+      <h1>Umer Qureshi</h1>
+      <p class="dev-role">Computer Systems Engineering Student &middot; Co-Founder & Lead Developer at <span class="text-purple">Voidium</span></p>
+      <p class="dev-desc">
+        Built this Kali Linux clone as an assignment: full HTML / CSS / Bootstrap recreation of the
+        official site, matching every section, animation, and dual light/dark theme pixel-for-pixel.
+      </p>
+      <div class="dev-links">
+        <a href="https://github.com/umerqureshi409" target="_blank" rel="noopener" class="btn-kali btn-doc"><i class="bi bi-github"></i> GitHub</a>
+        <a href="index.html" class="btn-kali btn-download"><i class="bi bi-arrow-left"></i> Back to Site</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     QUICK FACTS / STAT STRIP
+========================================================= -->
+<section class="dev-stats section-pad-sm">
+  <div class="container-x">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-card"><h3>MUET</h3><p>Kotri / Jamshoro, Sindh</p></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card"><h3>Voidium</h3><p>Co-Founder & Lead Dev</p></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card"><h3>CS Dept.</h3><p>Official Developer, cs.muet.edu.pk</p></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card"><h3>IICT</h3><p>Official Developer, iict.muet.edu.pk</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ABOUT / BIO
+========================================================= -->
+<section class="section-pad dev-about">
+  <div class="container-x">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-7">
+        <h2>About Me</h2>
+        <p>
+          I'm a Computer Systems Engineering student at Mehran University of Engineering and Technology,
+          based in Kotri, Sindh, Pakistan. Alongside my studies I co-founded <strong>Voidium</strong>, a
+          software studio started by MUET engineering students, where I work as the lead developer on
+          client and institutional projects.
+        </p>
+        <p>
+          I currently hold official developer roles for MUET's Computer Science Department
+          (<a href="https://cs.muet.edu.pk" target="_blank" rel="noopener">cs.muet.edu.pk</a>) and the
+          Institute of Information and Communication Technologies
+          (<a href="https://iict.muet.edu.pk" target="_blank" rel="noopener">iict.muet.edu.pk</a>), building
+          and maintaining production systems used by the department and institute.
+        </p>
+        <p>
+          This page — and the entire Kali Linux clone it belongs to — was built as a university assignment:
+          a fully responsive HTML, CSS, and Bootstrap recreation of the official Kali Linux website,
+          including the laptop-screen mockup, the cursor-driven tools scroller, the crossfading
+          "Kali Everywhere" showcase, and a dark/light theme switch in the footer.
+        </p>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="dev-panel">
+          <h4><i class="bi bi-code-slash"></i> This Project</h4>
+          <ul>
+            <li>HTML5, CSS3 (custom properties for theming), Bootstrap 5 grid & utilities</li>
+            <li>Vanilla JavaScript — no frameworks, no build step</li>
+            <li>SVG laptop mockup with screenshot masked into the exact screen area</li>
+            <li>Cursor-position horizontal scroll for the tools strip</li>
+            <li>Crossfading screenshots to simulate the "live" demo panels</li>
+            <li>LocalStorage-backed dark / light theme toggle</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SKILLS / STACK
+========================================================= -->
+<section class="section-pad dev-skills">
+  <div class="container-x">
+    <h2 class="text-center">Tech I Work With</h2>
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-3"><div class="skill-chip">HTML5 / CSS3</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">JavaScript</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">Bootstrap 5</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">Next.js / React</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">Node.js</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">PHP</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">PostgreSQL</div></div>
+      <div class="col-6 col-md-3"><div class="skill-chip">ESP32 / IoT</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="kali-footer section-pad-sm">
+  <div class="container-x">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>&copy; 2026 Umer Qureshi — Built for a university assignment. Not affiliated with OffSec / Kali Linux.</span>
+      <a href="index.html" class="text-purple">‹ Back to site</a>
+    </div>
+  </div>
+</footer>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

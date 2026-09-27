@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kali Linux | Penetration Testing and Ethical Hacking Linux Distribution</title>
+
+<!-- Bootstrap 5 grid + utilities (layout only — colors/effects are custom, see css/style.css) -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap icons for the small UI glyphs (chevrons, search, social) -->
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<!-- our own stylesheet loads AFTER bootstrap so it can override it -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/kali-dragon-icon.svg">
+</head>
+<body>
+
+<!-- =========================================================
+     NAVBAR
+     using bootstrap's navbar-expand-lg base + our own custom
+     classes (kali-navbar) for the transparent -> solid on scroll
+     behaviour and the hover dropdowns
+========================================================= -->
+<nav class="kali-navbar">
+  <div class="container-x">
+    <a href="index.html" class="kali-logo">KALI</a>
+
+    <button class="navbar-toggle"><i class="bi bi-list"></i></button>
+
+    <div class="kali-nav-links">
+      <a href="#">JOIN FREE CTF</a>
+      <a href="#">GET KALI</a>
+      <a href="#">BLOG</a>
+
+      <div class="nav-drop">
+        <a href="#">DOCUMENTATION <i class="bi bi-chevron-down"></i></a>
+        <div class="nav-drop-menu">
+          <a href="#">Installation</a>
+          <a href="#">General Use</a>
+          <a href="#">Kali Tools</a>
+          <a href="#">Troubleshooting</a>
+          <a href="#">Development</a>
+        </div>
+      </div>
+
+      <div class="nav-drop">
+        <a href="#">COMMUNITY <i class="bi bi-chevron-down"></i></a>
+        <div class="nav-drop-menu">
+          <a href="#">Kali Forums</a>
+          <a href="#">Bug Tracker</a>
+          <a href="#">Discord</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+
+      <a href="#">COURSES</a>
+
+      <div class="nav-drop">
+        <a href="#">DEVELOPERS <i class="bi bi-chevron-down"></i></a>
+        <div class="nav-drop-menu">
+          <a href="#">Git Repositories</a>
+          <a href="#">Bug Tracker</a>
+          <a href="developer.html">Meet the Developer</a>
+        </div>
+      </div>
+
+      <div class="nav-drop">
+        <a href="#">ABOUT <i class="bi bi-chevron-down"></i></a>
+        <div class="nav-drop-menu">
+          <a href="#">About Us</a>
+          <a href="#">FAQ</a>
+          <a href="developer.html">Developer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO SECTION — home-banner.jpg as bg + floating dragon logo
+========================================================= -->
+<header class="hero">
+  <div class="container-x hero-inner">
+    <img src="images/kali-dragon-icon.svg" alt="Kali dragon" class="hero-dragon">
+    <div class="hero-text">
+      <h1>The most advanced<br>Penetration Testing Distribution</h1>
+      <p>Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-kali btn-download"><i class="bi bi-download"></i> DOWNLOAD</a>
+        <a href="#" class="btn-kali btn-doc"><i class="bi bi-journal-text"></i> DOCUMENTATION</a>
+      </div>
+    </div>
+  </div>
+  <a href="#standard" class="hero-scroll"><i class="bi bi-chevron-down"></i></a>
+</header>
+
+<!-- =========================================================
+     THE INDUSTRY STANDARD  (feature grid + laptop mockup)
+========================================================= -->
+<section class="standard-section section-pad" id="standard">
+  <div class="container-x">
+    <h2 class="standard-heading">The Industry Standard</h2>
+    <p class="standard-sub">Kali Linux is not about its tools, nor the operating system. Kali Linux is a <strong>platform</strong>.</p>
+
+    <!-- first row: 3 equal feature blocks (pure CSS grid — no bootstrap row here
+         to avoid the two grid systems fighting each other) -->
+    <div class="standard-grid-top">
+      <div class="std-item">
+        <h4><i class="bi bi-gear-fill"></i> Make Your Job Easier</h4>
+        <p>You can take any Linux and install pentesting tools on it, but you have to set the tools up manually and configure them. Kali is optimized to reduce the amount of work, so a professional can just sit down and go.</p>
+      </div>
+      <div class="std-item">
+        <h4><i class="bi bi-globe2"></i> Kali Everywhere</h4>
+        <p>A version of Kali is always close to you, no matter where you need it. Mobile devices, Containers, ARM, Cloud providers, Windows Subsystem for Linux, Pre-built Virtual Machine, Installer Images, and others are all available.</p>
+      </div>
+      <div class="std-item">
+        <h4><i class="bi bi-pencil-square"></i> Customization</h4>
+        <p>With the use of metapackages optimized for the specific tasks of a security professional, and a highly accessible and well documented ISO customization process, it's always easy to generate an optimized version of Kali for your specific needs.</p>
+      </div>
+    </div>
+    <!-- second row: the remaining 2 blocks, centered -->
+    <div class="standard-grid-bottom">
+      <div class="std-item">
+        <h4><i class="bi bi-book-half"></i> Documentation</h4>
+        <p>Whether you are a seasoned veteran or a novice, our documentation will have all the information you will need to know about Kali Linux. Multiple tips and "recipes" are available, to help ease doubts or address any issues.</p>
+      </div>
+      <div class="std-item">
+        <h4><i class="bi bi-chat-dots-fill"></i> Community</h4>
+        <p>Kali Linux, with its BackTrack lineage, has a vibrant and active community. There are active Kali forums, IRC Channel, Kali Tools listings, an open bug tracker system, and even community provided tool suggestions.</p>
+      </div>
+    </div>
+
+    <!--
+      LAPTOP MOCKUP:
+      images/notebook.svg is the laptop frame (transparent screen hole).
+      We overlay the real Kali menu screenshot (notebook-kali-2024.1.jpg)
+      exactly inside that hole using percentages measured from the raw
+      svg coordinates (see .laptop-screen in style.css for the math note).
+    -->
+    <div class="laptop-wrap">
+      <div class="laptop-screen">
+        <img src="images/notebook-kali-2024.1.jpg" alt="Kali Linux desktop menu">
+      </div>
+      <img src="images/notebook.svg" class="laptop-frame" alt="laptop frame">
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ALL THE TOOLS YOU NEED — hover-to-scroll tool strip
+========================================================= -->
+<section class="tools-section section-pad">
+  <div class="container-x">
+    <h2 >All the tools you need</h2>
+    <p class="lead-text">The Kali Linux penetration testing platform contains a vast array of tools and utilities. From information gathering to final reporting, Kali Linux enables security and IT professionals to assess the security of their systems.</p>
+    <a href="#" class="tools-cta">Find out all about <span class="text-purple">Kali's Tools ›</span></a>
+  </div>
+
+  <!-- move your mouse left/right over this strip -> track pans (see script.js part 4) -->
+  <div class="tools-track-outer">
+    <div class="tools-track" id="toolsTrack">
+      <div class="tool-item"><img src="images/tool-logo-aircrack-ng.svg" alt="Aircrack-ng"><span>Aircrack-ng</span></div>
+      <div class="tool-item"><img src="images/tool-logo-burp.svg" alt="Burp Suite"><span>Burp Suite</span></div>
+      <div class="tool-item"><img src="images/tool-logo-hydra.svg" alt="Hydra"><span>Hydra</span></div>
+      <div class="tool-item"><img src="images/tool-logo-john.svg" alt="John the Ripper"><span>John the Ripper</span></div>
+      <div class="tool-item"><img src="images/tool-logo-maltego.svg" alt="Maltego"><span>Maltego</span></div>
+      <div class="tool-item"><img src="images/tool-logo-metasploit.svg" alt="Metasploit"><span>Metasploit</span></div>
+      <div class="tool-item"><img src="images/tool-logo-nmap.svg" alt="Nmap"><span>Nmap</span></div>
+      <div class="tool-item"><img src="images/tool-logo-sqlmap.svg" alt="sqlmap"><span>sqlmap</span></div>
+      <div class="tool-item"><img src="images/tool-logo-wireshark.svg" alt="Wireshark"><span>Wireshark</span></div>
+      <div class="tool-item"><img src="images/tool-logo-responder.svg" alt="Responder"><span>Responder</span></div>
+      <div class="tool-item"><img src="images/tool-logo-netexec.svg" alt="NetExec"><span>NetExec</span></div>
+      <div class="tool-item"><img src="images/tool-logo-ffuf.svg" alt="ffuf"><span>ffuf</span></div>
+      <div class="tool-item"><img src="images/tool-logo-starkiller.svg" alt="Starkiller"><span>Starkiller</span></div>
+      <div class="tool-item"><img src="images/tool-logo-powershell-empire.svg" alt="PowerShell Empire"><span>Empire</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     KALI EVERYWHERE — crossfading screenshots = "video" feel
+========================================================= -->
+<section class="everywhere-section section-pad">
+  <div class="container-x">
+    <h2 class="everywhere-heading">Kali <span class="text-purple">Everywhere</span></h2>
+
+    <div class="everywhere-row">
+      <div class="everywhere-side">
+        <div class="everywhere-frame" data-fade-group>
+          <img class="fade-img active" src="images/kali-desktop-undercover-normal.jpg" alt="Undercover mode">
+          <img class="fade-img" src="images/kali-desktop-undercover-normal-menu1.jpg" alt="Undercover mode menu">
+          <img class="fade-img" src="images/kali-desktop-undercover-window-files.jpg" alt="Undercover mode files">
+        </div>
+        <h5>Undercover Mode</h5>
+        <p>Using Kali in an environment where you don't want to draw attention to yourself? Kali Undercover is the perfect way to not stand out in a crowd.</p>
+      </div>
+
+      <div class="everywhere-side">
+        <div class="phone-frame" data-fade-group>
+          <img class="fade-img active" src="images/nethunter-phone.jpg" alt="Kali NetHunter">
+          <img class="fade-img" src="images/nethunter-terminal.jpg" alt="Kali NetHunter terminal">
+          <img class="fade-img" src="images/nethunter-desktop.jpg" alt="Kali NetHunter desktop">
+        </div>
+        <h5>Kali NetHunter</h5>
+        <p>A mobile penetration testing platform for Android devices, based on Kali Linux. Kali NetHunter is made up of an App, App Store, Kali Container, and KeX.</p>
+      </div>
+
+      <div class="everywhere-side">
+        <div class="everywhere-frame" data-fade-group>
+          <img class="fade-img active" src="images/kali-winkex-desktop.jpg" alt="Win-KeX desktop">
+          <img class="fade-img" src="images/kali-winkex-menu.jpg" alt="Win-KeX menu">
+          <img class="fade-img" src="images/kali-winkex-terminal.jpg" alt="Win-KeX terminal">
+        </div>
+        <h5>Win-KeX</h5>
+        <p>Win-KeX provides a full Kali Desktop Experience for Windows WSL. Applications started via Kali's panel will share the desktop with Microsoft Windows applications.</p>
+      </div>
+    </div>
+
+    <!-- platform icon grid -->
+    <div class="platform-grid">
+      <div class="platform-card">
+        <img src="images/kali-everywhere-arm.svg" alt="ARM"><h6>ARM</h6>
+        <p>Cheap & low powered devices, which make for great leave-behind devices with long battery life.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-installerimages.svg" alt="Bare Metal"><h6>Bare Metal</h6>
+        <p>Single or multiple boot Kali, giving you complete control over the hardware access.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-cloud.svg" alt="Cloud"><h6>Cloud</h6>
+        <p>Hosting providers which have Kali Linux pre-installed, ready to go, without worrying about the infrastructure.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-container.svg" alt="Containers"><h6>Containers</h6>
+        <p>Using Docker or LXD, allows for extremely quick and easy access to all of Kali's tools.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-mobile.svg" alt="Mobile"><h6>Mobile</h6>
+        <p>A mobile penetration testing platform for Android devices, based on Kali Linux.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-usb.svg" alt="USB"><h6>USB</h6>
+        <p>Kali in your pocket, ready to go with Live Boot. Your Kali, always with you, without altering the host OS.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-vm.svg" alt="Virtual Machines"><h6>Virtual Machines</h6>
+        <p>VMware, VirtualBox & QEMU pre-built images ready to go, allowing for a Kali install as bare as possible.</p>
+      </div>
+      <div class="platform-card">
+        <img src="images/kali-everywhere-wsl.svg" alt="WSL"><h6>WSL</h6>
+        <p>WSL is included out of the box with modern Windows. Start using Kali (and Win-KeX) without extra software.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CHOOSE THE DESKTOP YOU PREFER
+========================================================= -->
+<section class="desktop-section section-pad">
+  <div class="container-x">
+    <h2 class="desktop-heading">Choose the desktop <span class="text-purple">you prefer</span></h2>
+
+    <div class="desktop-row">
+      <div class="desktop-text">
+        <h4><img src="images/logo-xfce.svg" alt="Xfce"> Xfce</h4>
+        <p>Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly.</p>
+        <p>Xfce consists of separately packaged parts that together provide all functions of the desktop environment, but can be selected in subsets to suit user needs. This is Kali's default desktop environment.</p>
+      </div>
+      <div class="desktop-shot"><img src="images/kali-desktop-xfce.jpg" alt="Xfce desktop"></div>
+    </div>
+
+    <div class="desktop-row reverse">
+      <div class="desktop-text">
+        <h4><img src="images/logo-gnome.svg" alt="GNOME"> GNOME Shell</h4>
+        <p>Every part of GNOME Shell has been designed to make it simple and easy to use. The Activities Overview is an easy way to access all your basic tasks. A press of a button is all it takes to view your open windows.</p>
+        <p>Having everything in one place is convenient and means that you don't have to learn your way through a maze of different technologies.</p>
+      </div>
+      <div class="desktop-shot"><img src="images/kali-desktop-gnome.jpg" alt="GNOME desktop"></div>
+    </div>
+
+    <div class="desktop-row">
+      <div class="desktop-text">
+        <h4><img src="images/logo-kde.svg" alt="KDE"> KDE Plasma</h4>
+        <p>Plasma is made to stay out of the way as it helps you get things done. But under its light and intuitive surface, it's a powerhouse. So you're free to choose ways of usage right as you need them and when you need them.</p>
+        <p>With Plasma the user is king. Change the color scheme, move the panel, change the font, or download custom widgets and add them to your desktop or panel.</p>
+      </div>
+      <div class="desktop-shot"><img src="images/kali-desktop-kde.jpg" alt="KDE desktop"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     LATEST NEWS FROM BLOG
+========================================================= -->
+<section class="blog-section section-pad">
+  <div class="container-x">
+    <p class="blog-heading">Latest news from <a href="#" class="text-purple">our blog ›</a></p>
+
+    <div class="row g-3">
+      <div class="col-6 col-lg-3">
+        <div class="blog-card">
+          <img src="images/blog/blog-release-2026-2.jpg" alt="Kali 2026.2 Release">
+          <div class="blog-card-body">
+            <h6><a href="#">Kali Linux 2026.2 Release (GNOME 50, KDE 6.6, Helper Scripts, APT Formats & VM Boot Tweaking)</a></h6>
+            <p>It's the final week of Q2, and Kali 2026.2 is here — right on schedule, with a mix of desktop refreshes and quality-of-life changes.</p>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> 29 June 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="blog-card">
+          <img src="images/blog/blog-release-2026-1.jpg" alt="Kali 2026.1 Release">
+          <div class="blog-card-body">
+            <h6><a href="#">Kali Linux 2026.1 Release (2026 Theme & BackTrack Mode)</a></h6>
+            <p>New year, new release — Kali 2026.1 is here! Everything from a fresh coat of paint to a nod to our roots, with ongoing improvements.</p>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> 24 March 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="blog-card">
+          <img src="images/blog/blog-llm-ollama.jpg" alt="Kali & LLM Ollama & 5ire">
+          <div class="blog-card-body">
+            <h6><a href="#">Kali & LLM: Completely local with Ollama & 5ire</a></h6>
+            <p>Extending our LLM-driven Kali series, where natural language replaces manual command input — fully local, no 3rd party services.</p>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> 10 March 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="blog-card">
+          <img src="images/blog/blog-llm-claude.jpg" alt="Kali & LLM Claude Desktop">
+          <div class="blog-card-body">
+            <h6><a href="#">Kali & LLM: macOS with Claude Desktop & Anthropic Sonnet LLM</a></h6>
+            <p>An alternative method of using Kali Linux, leveraging an LLM to translate natural language descriptions into technical commands.</p>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> 25 February 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="kali-footer">
+  <div class="container-x">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="theme-switch-row">
+          <span>LIGHT</span>
+          <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+          </label>
+          <span>DARK</span>
+        </div>
+        <img src="images/kali-logo.svg" alt="Kali Linux" style="width:110px;opacity:.85">
+      </div>
+
+      <div class="footer-col">
+        <h6>Links</h6>
+        <a href="index.html">Home</a>
+        <a href="#">Download / Get Kali</a>
+        <a href="#">Blog</a>
+        <a href="#">OS Documentation</a>
+        <a href="#">Tool Documentation</a>
+      </div>
+      <div class="footer-col">
+        <h6>Platforms</h6>
+        <a href="#">ARM (SBC)</a>
+        <a href="#">NetHunter (Mobile)</a>
+        <a href="#">Amazon AWS</a>
+        <a href="#">Docker</a>
+        <a href="#">Vagrant</a>
+      </div>
+      <div class="footer-col">
+        <h6>Development</h6>
+        <a href="#">Bug Tracker</a>
+        <a href="#">Continuous Integration</a>
+        <a href="#">Network Mirror</a>
+        <a href="#">Package Tracker</a>
+        <a href="developer.html">Developer</a>
+      </div>
+      <div class="footer-col">
+        <h6>Community</h6>
+        <a href="#">Discord</a>
+        <a href="#">Support Forum</a>
+        <a href="#">PeerTube</a>
+      </div>
+      <div class="footer-col">
+        <h6>Follow Us</h6>
+        <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
+        <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+        <a href="#"><i class="bi bi-github"></i> GitHub</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> X</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; OffSec Services Limited 2026. All rights reserved.</span>
+      <span>Kali Linux is part of OffSec's Community Projects</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
