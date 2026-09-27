@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.kali-navbar');
   const navToggleBtn = document.querySelector('.navbar-toggle');
   const navLinks = document.querySelector('.kali-nav-links');
+  const navBackdrop = document.getElementById('navBackdrop');
 
   const onScroll = () => {
     if (window.scrollY > 40) navbar.classList.add('scrolled');
@@ -43,9 +44,37 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Single source of truth for opening/closing the mobile slide-in menu —
+  // swaps the hamburger <-> close (X) icon, dims the page with a backdrop,
+  // and locks background scroll while it's open.
+  const setMenuOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    if (navBackdrop) navBackdrop.classList.toggle('show', open);
+    navToggleBtn.setAttribute('aria-expanded', String(open));
+    const icon = navToggleBtn.querySelector('i');
+    if (icon) icon.className = open ? 'bi bi-x-lg' : 'bi bi-list';
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
   if (navToggleBtn) {
-    navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navToggleBtn.addEventListener('click', () => {
+      setMenuOpen(!navLinks.classList.contains('open'));
+    });
   }
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', () => setMenuOpen(false));
+  }
+  // Close the mobile menu when a real nav link (not a dropdown label) is tapped
+  document.querySelectorAll('.kali-nav-links a:not(.nav-drop > a)').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 1100) setMenuOpen(false);
+    });
+  });
+  // Escape key closes it too
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMenuOpen(false);
+  });
+
   // On mobile, tapping a dropdown label expands its submenu instead of navigating.
   document.querySelectorAll('.nav-drop > a').forEach(a => {
     a.addEventListener('click', (e) => {

@@ -275,8 +275,12 @@ img {
   background: none;
   border: 0;
   color: var(--text-1);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-left: auto;
+  position: relative;
+  z-index: 1200;
+  line-height: 1;
+  padding: 4px;
 }
 
 @media(max-width:1100px) {
@@ -286,6 +290,7 @@ img {
     right: -320px;
     height: 100vh;
     width: 290px;
+    z-index: 1100;
     background: var(--bg-2);
     flex-direction: column;
     align-items: flex-start;
@@ -302,8 +307,9 @@ img {
 
   .kali-nav-links a {
     width: 100%;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--border);
+    font-size: 1.05rem;
   }
 
   .nav-drop-menu {
@@ -457,16 +463,16 @@ img {
 
 .standard-heading {
   text-align: center;
-  font-size: 2.1rem;
-  margin-bottom: 8px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .standard-sub {
   text-align: center;
   color: var(--text-2);
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 60px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .standard-grid-top {
@@ -488,8 +494,8 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.05rem;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
   color: var(--text-1);
 }
 
@@ -499,10 +505,10 @@ img {
 
 .std-item p {
   color: var(--text-2);
-  font-size: .92rem;
-  line-height: 1.6;
-  text-align: justify;
+  font-size: 1.02rem;
+  line-height: 1.7;
   margin: 0;
+  text-align: justify;
 }
 
 @media(max-width:900px) {
@@ -569,20 +575,22 @@ img {
 }
 
 .tools-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 18px;
 }
 
 .tools-section p.lead-text {
   color: var(--text-2);
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 10px;
+  font-size: 1.1rem;
 }
 
 .tools-cta {
   display: inline-block;
   margin-bottom: 50px;
   font-weight: 600;
+  font-size: 1.05rem;
 }
 
 .tools-track-outer {
@@ -622,7 +630,7 @@ img {
 
 .tool-item span {
   color: var(--text-2);
-  font-size: .85rem;
+  font-size: 1rem;
   font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
 }
@@ -631,15 +639,15 @@ img {
    KALI EVERYWHERE
    ========================================================================== */
 .everywhere-section {
-background: url(/images/neon-background.svg);
-  background-size: cover;
+  background: url(/images/neon-background.svg);
+    background-size: cover;
     background-position: 50%;
     text-shadow: 0 1px 5px rgba(0, 0, 0, .2);
 }
 
 .everywhere-heading {
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   margin-bottom: 60px;
 }
 
@@ -657,13 +665,13 @@ background: url(/images/neon-background.svg);
 
 .everywhere-side h5 {
   margin: 16px 0 10px;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .everywhere-side p {
   color: var(--text-2);
-  font-size: .88rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .everywhere-frame {
@@ -736,7 +744,7 @@ background: url(/images/neon-background.svg);
   background: var(--bg-2);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 24px 20px;
+  padding: 28px 22px;
   text-align: center;
   transition: transform .22s ease, border-color .22s ease;
 }
@@ -747,29 +755,34 @@ background: url(/images/neon-background.svg);
 }
 
 .platform-card img {
-  width: 46px;
-  height: 46px;
-  margin: 0 auto 14px;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 16px;
 }
 
 .platform-card h6 {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 9px;
+  font-size: 1.15rem;
 }
 
 .platform-card p {
   color: var(--text-3);
-  font-size: .78rem;
-  line-height: 1.5;
-  text-align: justify;
+  font-size: .92rem;
+  line-height: 1.55;
   margin: 0;
 }
 
 @media(max-width:900px) {
   .platform-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:560px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -782,7 +795,7 @@ background: url(/images/neon-background.svg);
 
 .desktop-heading {
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   margin-bottom: 60px;
 }
 
@@ -805,7 +818,7 @@ background: url(/images/neon-background.svg);
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 14px;
 }
 
@@ -816,8 +829,8 @@ background: url(/images/neon-background.svg);
 
 .desktop-text p {
   color: var(--text-2);
-  font-size: .92rem;
-  line-height: 1.7;
+  font-size: 1.03rem;
+  line-height: 1.75;
 }
 
 .desktop-shot {
@@ -846,7 +859,7 @@ background: url(/images/neon-background.svg);
 .blog-heading {
   text-align: center;
   margin-bottom: 46px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   color: var(--text-1);
 }
@@ -886,7 +899,7 @@ background: url(/images/neon-background.svg);
 }
 
 .blog-card-body h6 {
-  font-size: .95rem;
+  font-size: 1.08rem;
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -901,14 +914,14 @@ background: url(/images/neon-background.svg);
 
 .blog-card-body p {
   color: var(--text-3);
-  font-size: .8rem;
-  line-height: 1.55;
+  font-size: .93rem;
+  line-height: 1.6;
   flex: 1;
 }
 
 .blog-date {
   color: var(--text-3);
-  font-size: .75rem;
+  font-size: .85rem;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -934,7 +947,7 @@ background: url(/images/neon-background.svg);
   background: var(--bg-0);
   border-top: 1px solid var(--border);
   padding: 70px 0 30px;
-  box-shadow: 0 0 20px rgb(10, 48, 237);
+   box-shadow: 0 0 20px rgba(10, 101, 237, 0.744);
 }
 
 .footer-grid {
@@ -949,13 +962,13 @@ background: url(/images/neon-background.svg);
   font-weight: 700;
   color: var(--text-1);
   margin-bottom: 16px;
-  font-size: .95rem;
+  font-size: 1.08rem;
 }
 
 .footer-col a {
   display: block;
   color: var(--text-3);
-  font-size: .83rem;
+  font-size: .95rem;
   margin-bottom: 10px;
 }
 
@@ -1033,6 +1046,7 @@ background: url(/images/neon-background.svg);
   gap: 12px;
   color: var(--text-3);
   font-size: .78rem;
+ 
 }
 
 @media(max-width:900px) {
@@ -1116,4 +1130,29 @@ background: url(/images/neon-background.svg);
 
 .back-to-top:hover {
   transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   MOBILE NAV BACKDROP — dims the page behind the sliding menu; tapping it
+   closes the menu (handled in script.js)
+   ========================================================================== */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .55);
+  z-index: 1090;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.nav-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media(min-width:1101px) {
+  .nav-backdrop {
+    display: none;
+  }
 }
