@@ -772,6 +772,7 @@ img {
   font-size: .92rem;
   line-height: 1.55;
   margin: 0;
+  text-align: justify;
 }
 
 @media(max-width:900px) {
