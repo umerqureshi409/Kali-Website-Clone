@@ -50,6 +50,7 @@
   border-radius: 50%;
   z-index: 1;
   background: conic-gradient(from 0deg, var(--accent-purple), var(--accent-blue), var(--accent-purple));
+  box-shadow: 0 0 20px rgba(33, 55, 248, 0.76), 0 0 40px rgba(78, 145, 197, 0.975);
   animation: spinRing 6s linear infinite;
 }
 
